@@ -12,7 +12,7 @@ const Contact = () => {
   const handleSubmit = e => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/log-submission", {
+      .post("https://cns-site-api.herokuapp.com/log-submission", {
         name: name,
         email: email,
         number: number,

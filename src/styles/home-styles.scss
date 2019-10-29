@@ -12,7 +12,7 @@
     text-align: center;
     &:hover {
       background-color: $background-gray;
-      color: white;
+      color: $site-blue;
     }
     &:active {
       background-color: $background-gray;
@@ -27,12 +27,12 @@
 .home-wrapper {
   display: flex;
   flex-direction: column;
-  background-image: url("https://source.unsplash.com/random");
+  background-image: url("../images/home.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   overflow: hidden;
   .header {
-    background-image: linear-gradient(to right, #3366ff, white);
+    background-image: url("../images/blueprint-banner.jpg");
     height: 14vh;
     width: 100vw;
     display: flex;
@@ -43,7 +43,7 @@
 
 .content {
   align-self: center;
-  width: 60vw;
+  width: 60.3vw;
   height: 100vh;
   background-color: white;
   display: grid;
@@ -65,7 +65,7 @@
   }
 }
 .footer {
-  background-image: linear-gradient(to right, #3366ff, white);
+  background-image: url("../images/blueprint-banner.jpg");
   height: 14vh;
   width: 100vw;
 }
