@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import NavBar from "./navbar";
 
@@ -7,6 +8,9 @@ const Home = () => {
     <div className="home-wrapper">
       <div className="header">
         <NavBar />
+      </div>
+      <div className="header-content">
+        <h1>Information</h1>
       </div>
       <div className="content">
         <div className="grid-item-text">
@@ -30,7 +34,15 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="footer"></div>
+      <div className="footer">
+        <div className="links">
+          <Link className="home-link">Home</Link>
+          <Link>Contact </Link>
+          <Link>Windows</Link>
+          <Link>Framing</Link>
+          <Link>Home Building</Link>
+        </div>
+      </div>
     </div>
   );
 };

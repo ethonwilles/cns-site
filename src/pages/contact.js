@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import NavBar from "./navbar";
 
@@ -69,7 +70,19 @@ const Contact = () => {
         <button type="submit">Submit</button>
       </form>
 
-      <div className="footer"></div>
+      <div className="footer">
+        <div className="links">
+          <Link className="home-link">Home</Link>
+          <Link>Contact </Link>
+          <Link>Windows</Link>
+          <Link>Framing</Link>
+          <Link>Home Building</Link>
+        </div>
+        <div className="info">
+          <p>Chad Willes</p>
+          <p>8017068523 </p>
+        </div>
+      </div>
     </div>
   );
 };
