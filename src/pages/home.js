@@ -36,11 +36,13 @@ const Home = () => {
 
       <div className="footer">
         <div className="links">
-          <Link className="home-link">Home</Link>
-          <Link>Contact </Link>
-          <Link>Windows</Link>
-          <Link>Framing</Link>
-          <Link>Home Building</Link>
+          <Link className="home-link" to="/">
+            Home
+          </Link>
+          <Link to="/">Contact </Link>
+          <Link to="/">Windows</Link>
+          <Link to="/">Framing</Link>
+          <Link to="/">Home Building</Link>
         </div>
       </div>
     </div>

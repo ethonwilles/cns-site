@@ -22,9 +22,9 @@ const NavBar = () => {
         <Link to="/contact">Contact</Link>
         <Link onClick={handleMoreClick}>More</Link>
         <div className="dropdown" style={{ visibility: "hidden" }}>
-          <Link>Windows</Link>
-          <Link>Framing</Link>
-          <Link>Home Building</Link>
+          <Link to="/">Windows</Link>
+          <Link to="/">Framing</Link>
+          <Link to="/">Home Building</Link>
           <button onClick={handleClose}>Close</button>
         </div>
       </div>
