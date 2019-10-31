@@ -23,6 +23,9 @@ body {
       &:hover {
         background-color: $background-gray;
         color: $site-blue;
+        i {
+          visibility: visible;
+        }
       }
       &:active {
         background-color: $background-gray;
@@ -32,11 +35,14 @@ body {
         background-color: $background-gray;
       }
     }
+    i {
+      visibility: hidden;
+    }
   }
   .dropdown {
     position: absolute;
     margin-top: 40px;
-    height: 148px;
+    height: 120px;
     width: 19.5vw;
     background-color: white;
     display: flex;
@@ -45,6 +51,9 @@ body {
     a {
       text-align: center;
       width: 92%;
+    }
+    i {
+      visibility: hidden;
     }
     button {
       cursor: pointer;
@@ -74,7 +83,7 @@ body {
   overflow: hidden;
   .header {
     background-color: #000080;
-    height: 14vh;
+    height: 10vh;
     width: 100vw;
     display: flex;
     align-items: flex-end;
@@ -83,7 +92,7 @@ body {
 }
 .header-content {
   align-self: center;
-  padding: 10px;
+  padding: 15px;
   width: 60.3vw;
   height: auto;
   background-color: white;
@@ -136,6 +145,11 @@ body {
 
       border-right: 1.5px solid white;
       padding: 10px;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        font-size: 20px;
+        filter: brightness(100%);
+      }
     }
     .home-link {
       border-left: 1.5px solid white;

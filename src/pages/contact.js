@@ -27,45 +27,52 @@ const Contact = () => {
       <div className="header">
         <NavBar />
       </div>
+      <div className="header-content">
+        <h1>Service Action Form</h1>
+      </div>
       <form onSubmit={handleSubmit}>
-        <div>
-          <div className="text-wrapper">
-            <p>Enter Name</p>
-            <div className="spacer"></div>
-            <input
-              className="Name"
-              type="text"
-              onChange={e => setName(e.target.value)}
-            />
+        <div className="grid-container">
+          <div className="hi">
+            <div className="text-wrapper">
+              <p>Enter Name</p>
+              <div className="spacer"></div>
+              <input
+                className="Name"
+                type="text"
+                onChange={e => setName(e.target.value)}
+              />
+            </div>
+            <div className="text-wrapper">
+              <p>Enter Email</p>
+              <div className="spacer"></div>
+              <input
+                className="Name"
+                type="text"
+                onChange={e => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="text-wrapper">
+              <p>Enter Phone Number</p>
+              <div className="spacer"></div>
+              <input
+                className="Name"
+                type="text"
+                onChange={e => setNumber(e.target.value)}
+              />
+            </div>
           </div>
-          <div className="text-wrapper">
-            <p>Enter Email</p>
-            <div className="spacer"></div>
-            <input
-              className="Name"
-              type="text"
-              onChange={e => setEmail(e.target.value)}
-            />
+          <div className="hi">
+            <div className="text-wrapper-textarea">
+              <p>Enter Description of Service Needed</p>
+              <div className="spacer"></div>
+              <textarea
+                className="Name"
+                type="text"
+                style={{ height: "45vh", width: "39vw" }}
+                onChange={e => setDesc(e.target.value)}
+              />
+            </div>
           </div>
-          <div className="text-wrapper">
-            <p>Enter Phone Number</p>
-            <div className="spacer"></div>
-            <input
-              className="Name"
-              type="text"
-              onChange={e => setNumber(e.target.value)}
-            />
-          </div>
-        </div>
-        <div className="text-wrapper-textarea">
-          <p>Enter Description of Service Needed</p>
-          <div className="spacer"></div>
-          <textarea
-            className="Name"
-            type="text"
-            style={{ height: "85%", width: "35vw" }}
-            onChange={e => setDesc(e.target.value)}
-          />
         </div>
         <button type="submit">Submit</button>
       </form>

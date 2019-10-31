@@ -8,24 +8,29 @@ const NavBar = () => {
       visibility: "visible"
     };
   };
-  const handleClose = () => {
-    const close = document.querySelector(".dropdown");
-    console.log(close);
-    close.style = {
-      visibility: "hidden"
-    };
-  };
+
   return (
     <div className="navPage">
       <div className="navbar">
-        <Link to="/">Home</Link>
-        <Link to="/contact">Contact</Link>
-        <Link onClick={handleMoreClick}>More</Link>
+        <Link to="/">
+          <i class="fas fa-undo"></i>Home
+        </Link>
+        <Link to="/contact">
+          <i class="fas fa-address-book"></i>Contact
+        </Link>
+        <Link onClick={handleMoreClick}>
+          <i class="fas fa-bars"></i>More
+        </Link>
         <div className="dropdown" style={{ visibility: "hidden" }}>
-          <Link to="/">Windows</Link>
-          <Link to="/">Framing</Link>
-          <Link to="/">Home Building</Link>
-          <button onClick={handleClose}>Close</button>
+          <Link to="/">
+            <i class="fas fa-border-all"></i>Windows
+          </Link>
+          <Link to="/">
+            <i class="fas fa-cubes"></i>Framing
+          </Link>
+          <Link to="/">
+            <i class="fas fa-home"></i>Home Building
+          </Link>
         </div>
       </div>
     </div>

@@ -8,45 +8,73 @@
   background-size: 100%;
   overflow: hidden;
 }
+.header-content {
+  padding: 20px 0;
+}
 .header {
   background-image: linear-gradient(to right, #000080, white);
-  height: 14vh;
+  height: 10vh;
   width: 100vw;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
 form {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  justify-items: center;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
   width: 59.1vw;
   height: 100vh;
   padding: 10px;
   background-color: white;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.75);
-  input,
-  .text-wrapper {
-    margin: 20px;
-    width: 10vw;
-    font-family: "Lato", sans-serif;
-  }
-  input {
-    padding: 5px;
-    font-size: 16px;
-  }
+  .grid-container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-content: center;
+    .hi {
+      input,
+      .text-wrapper {
+        margin: 20px;
+        width: 10vw;
+        font-family: "Lato", sans-serif;
+      }
+      input {
+        padding: 5px;
+        font-size: 16px;
+      }
 
-  textarea {
-    font-size: 24px;
-  }
+      textarea {
+        font-size: 24px;
+      }
 
-  input,
-  textarea {
-    border: 1.5px solid $site-blue;
-    &:focus {
-      outline: 0px;
-      font-family: "Lato", sans-serif;
+      input,
+      textarea {
+        border: 1.5px solid $site-blue;
+        &:focus {
+          outline: 0px;
+          font-family: "Lato", sans-serif;
+        }
+      }
+    }
+  }
+  button {
+    cursor: pointer;
+    color: white;
+    outline: 0;
+    padding: 15px;
+    background-color: $site-blue;
+    border: 0;
+    font-size: 1.25em;
+    border-radius: 50px;
+    align-self: center;
+    margin-top: 35px;
+    width: 25vw;
+    transition: 0.1s;
+    &:active {
+      background-color: lightblue;
+      color: $site-blue;
     }
   }
 }
