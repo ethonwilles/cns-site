@@ -22,13 +22,13 @@ const NavBar = () => {
           <i class="fas fa-bars"></i>More
         </Link>
         <div className="dropdown" style={{ visibility: "hidden" }}>
-          <Link to="/">
+          <Link to="/windows">
             <i class="fas fa-border-all"></i>Windows
           </Link>
-          <Link to="/">
+          <Link to="/framing">
             <i class="fas fa-cubes"></i>Framing
           </Link>
-          <Link to="/">
+          <Link to="/homebuilding">
             <i class="fas fa-home"></i>Home Building
           </Link>
         </div>

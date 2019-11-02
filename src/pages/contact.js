@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 import NavBar from "./navbar";
+import FooterLinks from "./footerLinks";
 
 const Contact = () => {
   const [name, setName] = React.useState("");
@@ -21,6 +21,10 @@ const Contact = () => {
       })
       .then(res => console.log(res.data));
     //   .then(data => console.log(data));
+
+    document.querySelectorAll(".Name").forEach(elem => {
+      elem.value = "";
+    });
   };
   return (
     <div className="contact-wrapper">
@@ -68,7 +72,6 @@ const Contact = () => {
               <textarea
                 className="Name"
                 type="text"
-                style={{ height: "45vh", width: "39vw" }}
                 onChange={e => setDesc(e.target.value)}
               />
             </div>
@@ -79,11 +82,7 @@ const Contact = () => {
 
       <div className="footer">
         <div className="links">
-          <Link className="home-link">Home</Link>
-          <Link>Contact </Link>
-          <Link>Windows</Link>
-          <Link>Framing</Link>
-          <Link>Home Building</Link>
+          <FooterLinks />
         </div>
         <div className="info">
           <p>Chad Willes</p>

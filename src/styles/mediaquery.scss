@@ -1,0 +1,134 @@
+@media (max-width: 900px) {
+  .navPage {
+    display: flex;
+
+    .navbar {
+      align-self: center;
+      width: 61.3vw;
+
+      margin-right: 17px;
+    }
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    img {
+      height: 200px;
+    }
+  }
+  form {
+    height: auto;
+    textarea {
+      height: 292px !important;
+      width: 275px !important;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      .hi {
+        padding-left: 20px;
+        width: 100%;
+        .text-wrapper {
+          width: 75%;
+
+          p {
+            text-align: center;
+          }
+          input {
+            width: 80%;
+            align-self: center;
+          }
+        }
+        .text-wrapper-textarea {
+          .spacer {
+            width: 283px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 93vw;
+    img {
+      height: 200px;
+      width: 87vw;
+    }
+  }
+  .navPage {
+    display: flex;
+
+    .navbar {
+      align-self: center;
+      width: 65.3vw;
+      margin-left: 15px;
+      a {
+        padding: 17px;
+      }
+      i {
+        visibility: visible;
+      }
+      .dropdown {
+        i {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  .header-content {
+    width: 95vw;
+  }
+  form {
+    height: auto;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    textarea {
+      height: 292px !important;
+      width: 200px !important;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      .hi {
+        width: 100%;
+        .text-wrapper {
+          width: 80%;
+          .spacer {
+            width: 307px;
+          }
+          p {
+            text-align: center;
+          }
+          input {
+            width: 87%;
+            align-self: center;
+          }
+        }
+        .text-wrapper-textarea {
+          .spacer {
+            width: 250px;
+          }
+          margin-left: 40px;
+          p {
+            text-align: left;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    .links {
+      width: 100%;
+    }
+  }
+}
