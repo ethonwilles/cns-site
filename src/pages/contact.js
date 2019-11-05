@@ -5,6 +5,8 @@ import NavBar from "./navbar";
 import FooterLinks from "./footerLinks";
 // import { localApiKey } from "./secrets";
 
+console.log(process.env.REACT_APP_API_KEY);
+
 const Contact = () => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -25,7 +27,6 @@ const Contact = () => {
       })
       .then(res => console.log(res.data));
     //   .then(data => console.log(data));
-    console.log(process.env.REACT_APP_API_KEY);
 
     document.querySelectorAll(".Name").forEach(elem => {
       elem.value = "";
