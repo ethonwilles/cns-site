@@ -13,7 +13,7 @@ const Contact = () => {
   const [email, setEmail] = React.useState("");
   const [number, setNumber] = React.useState("");
   const [desc, setDesc] = React.useState("");
-  const [show, setShow] = React.useState(true);
+  const [show, setShow] = React.useState(false);
 
   const handleSubmit = e => {
     e.preventDefault();
