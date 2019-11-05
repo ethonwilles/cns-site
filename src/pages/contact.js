@@ -25,6 +25,7 @@ const Contact = () => {
       })
       .then(res => console.log(res.data));
     //   .then(data => console.log(data));
+    console.log(process.env.REACT_APP_API_KEY);
 
     document.querySelectorAll(".Name").forEach(elem => {
       elem.value = "";
