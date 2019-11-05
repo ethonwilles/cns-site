@@ -13,8 +13,6 @@ const Contact = () => {
   const [number, setNumber] = React.useState("");
   const [desc, setDesc] = React.useState("");
 
-  console.log("local: ", localApiKey);
-
   const handleSubmit = e => {
     e.preventDefault();
     axios
