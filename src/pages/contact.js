@@ -3,12 +3,15 @@ import axios from "axios";
 
 import NavBar from "./navbar";
 import FooterLinks from "./footerLinks";
+// import { localApiKey } from "./secrets";
 
 const Contact = () => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [number, setNumber] = React.useState("");
   const [desc, setDesc] = React.useState("");
+
+  console.log("local: ", localApiKey);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -17,7 +20,8 @@ const Contact = () => {
         name: name,
         email: email,
         number: number,
-        desc: desc
+        desc: desc,
+        API_KEY: process.env.REACT_APP_API_KEY
       })
       .then(res => console.log(res.data));
     //   .then(data => console.log(data));
