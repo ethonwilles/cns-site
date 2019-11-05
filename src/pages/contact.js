@@ -3,6 +3,7 @@ import axios from "axios";
 
 import NavBar from "./navbar";
 import FooterLinks from "./footerLinks";
+import ContactModal from "./contact-modal";
 // import { localApiKey } from "./secrets";
 
 console.log(process.env.REACT_APP_API_KEY);
@@ -12,6 +13,7 @@ const Contact = () => {
   const [email, setEmail] = React.useState("");
   const [number, setNumber] = React.useState("");
   const [desc, setDesc] = React.useState("");
+  const [show, setShow] = React.useState(true);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -30,15 +32,27 @@ const Contact = () => {
       elem.value = "";
     });
   };
+
+  const showModal = () => {
+    setShow(!show);
+  };
+
+  const setStyles = () => {
+    if (show) {
+      return { filter: "brightness(50%)" };
+    } else {
+      return null;
+    }
+  };
   return (
-    <div className="contact-wrapper">
+    <div className="contact-wrapper overlay">
       <div className="header">
         <NavBar />
       </div>
       <div className="header-content">
         <h1>Service Action Form</h1>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={setStyles()}>
         <div className="grid-container">
           <div className="hi">
             <div className="text-wrapper">
@@ -81,9 +95,17 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <button type="submit">Submit</button>
-      </form>
 
+        <button
+          type="submit"
+          onClick={e => {
+            showModal();
+          }}
+        >
+          Submit
+        </button>
+      </form>
+      <ContactModal show={show} onClose={showModal} />
       <div className="footer">
         <div className="links">
           <FooterLinks />

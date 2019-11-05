@@ -2,6 +2,37 @@
   width: 19.75%;
 }
 
+.contact-modal {
+  position: absolute;
+  align-self: center;
+
+  background-color: white;
+  border: 2px solid $site-blue;
+  padding: 15px;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 2px 1px black;
+  button {
+    padding: 5px;
+    width: 60%;
+    cursor: pointer;
+    color: white;
+    outline: 0;
+    background-color: $site-blue;
+    border: 0;
+    font-size: 1.25em;
+    border-radius: 50px;
+    align-self: center;
+    transition: 0.1s;
+    &:active {
+      background-color: lightblue;
+      color: $site-blue;
+    }
+  }
+}
+
 .contact-wrapper {
   display: flex;
   flex-direction: column;
